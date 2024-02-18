@@ -2,8 +2,12 @@
 
 import { useEffect, useState } from 'react';
 
+interface Message {
+  recipient: string;
+  message: string;
+}
 export default function Page() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<Message[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
