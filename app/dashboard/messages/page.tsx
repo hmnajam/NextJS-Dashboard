@@ -13,7 +13,7 @@ export default function Page() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://express-hello-world-iv2o.onrender.com/get-all-messages',
+          'https://chatify-whxk.onrender.com/get-all-messages',
         );
         const data = await response.json();
         setMessages(data.response);
