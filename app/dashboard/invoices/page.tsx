@@ -37,10 +37,3 @@ export default async function Page({
     </div>
   );
 }
-
-
-
-
-
-
-// This is just a smaple.
