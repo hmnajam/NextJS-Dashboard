@@ -13,7 +13,11 @@ export default function Page() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://chatterly-labcloud-4a8k.onrender.com/get-all-messages',
+          // Chatify LabCloud api
+          // 'https://chatterly-labcloud-4a8k.onrender.com/get-all-messages',
+
+          // Chatify LabCloud api
+          'https://chatify-whxk.onrender.com/get-all-messages',
         );
         const data = await response.json();
         setMessages(data.response);
