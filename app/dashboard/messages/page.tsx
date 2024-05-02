@@ -17,7 +17,7 @@ export default function Page() {
           // 'https://chatterly-labcloud-4a8k.onrender.com/get-all-messages',
 
           // Chatify LabCloud api
-          'https://chatterly-labcloud-4a8k.onrender.com/get-all-messages',
+          'https://chatify-drlab.onrender.com/get-all-messages',
         );
         const data = await response.json();
         setMessages(data.response);
