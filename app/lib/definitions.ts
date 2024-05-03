@@ -86,3 +86,10 @@ export type InvoiceForm = {
   amount: number;
   status: 'pending' | 'paid';
 };
+
+// types.ts
+export interface Message {
+  recipient: string;
+  message: string;
+  timestamp: string;
+}

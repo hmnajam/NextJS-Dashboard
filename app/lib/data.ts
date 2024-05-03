@@ -8,6 +8,7 @@ import {
   LatestInvoiceRaw,
   User,
   Revenue,
+  Message,
 } from './definitions';
 import { formatCurrency } from './utils';
 
@@ -220,4 +221,15 @@ export async function getUser(email: string) {
     console.error('Failed to fetch user:', error);
     throw new Error('Failed to fetch user.');
   }
+}
+
+export async function fetchMessages(): Promise<Message[]> {
+  const response = await fetch(
+    'https://chatify-drlab.onrender.com/get-all-messages',
+  );
+  if (!response.ok) {
+    throw new Error('Failed to fetch messages');
+  }
+  const data = await response.json();
+  return data.response;
 }
